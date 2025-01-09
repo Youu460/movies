@@ -342,8 +342,8 @@ User - {}"""
 Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴜsᴇ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs😇</b>"""
 
     SOURCE_TXT = """<b>
-NOTE:
-- It is an private one
+✅ - This Bot Is An Private Project
+✅ - ꜱᴏᴜʀᴄᴇ - <a href="https://t.me/Leomc_bot">⚡ ʜᴇʀᴇ ⚡</a>
 
 developer : ISAGI_x3
 </b>""" 
