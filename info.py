@@ -1,6 +1,7 @@
 import re
-from os import environ,getenv
-from Script import script
+import os
+from os import environ
+from Script import script 
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -10,27 +11,22 @@ def is_enabled(value, default):
         return False
     else:
         return default
-#---------------------------------------------------------------
-#---------------------------------------------------------------         ,
+
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '21484575'))
 API_HASH = environ.get('API_HASH', 'db6286a041a873eb6c571df07ef4244e')
 BOT_TOKEN = environ.get('BOT_TOKEN', '7807282657:AAHFABI9ygow9sLqNQuI7hsWPm5FLNfBr9c')
-#---------------------------------------------------------------
-#---------------------------------------------------------------
+
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 USERNAME = environ.get('USERNAME', "https://t.me/ISAGI_x3") # ADMIN USERNAME
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002190681742'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+Q5Ov15NUMlRiNmFl')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002190681742').split()]
-#---------------------------------------------------------------
-#---------------------------------------------------------------
+
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://learningbots:learningbots@learningbots.5yddr.mongodb.net/?retryWrites=true&w=majority&appName=learningbots")
 DATABASE_NAME = environ.get('DATABASE_NAME', "learningbots")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-#---------------------------------------------------------------
-#---------------------------------------------------------------
-#----------- There will be channel id add in all these ---------
+
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL','0'))
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
@@ -40,10 +36,9 @@ SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '0'))
 request_channel = environ.get('REQUEST_CHANNEL', 'https://t.me/+VRLA6bhebJozNGI9')
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '0'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+iM0zj8l9dOMyY2U1') #Support group link ( make sure bot is admin )
-#---------------------------------------------------------------
-#---------------------------------------------------------------
+
 IS_VERIFY = is_enabled('IS_VERIFY', False)
-#---------------------------------------------------------------
+
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "3097623f852197a9ce40d1212aaa8bbf2803e799")
