@@ -15,7 +15,7 @@ async def index_files(bot, query):
     _, ident, chat, lst_msg_id, skip = query.data.split("#")
     if ident == 'yes':
         msg = query.message
-        await msg.edit("<b>Indexing started...</b>")
+        await msg.edit("<b>Indexing started ✅ ...</b>")
         try:
             chat = int(chat)
         except:
@@ -23,7 +23,7 @@ async def index_files(bot, query):
         await index_files_to_db(int(lst_msg_id), chat, msg, bot, int(skip))
     elif ident == 'cancel':
         temp.CANCEL = True
-        await query.message.edit("Trying to cancel Indexing...")
+        await query.message.edit("Trying to cancel Indexing ✅ ...")
 
 @Client.on_message(filters.command('index') & filters.private & filters.incoming & filters.user(ADMINS))
 async def send_for_index(bot, message):
